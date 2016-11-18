@@ -65,12 +65,13 @@
 
 			<div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
 				<span class="glyphicon glyphicon-thumbs-up"
-				ng-click="incrementUpvotes(comment)"></span>
+				ng-click="upvote(comment)"></span>
 				{{comment.upvotes}} - by {{comment.author}}
 				<span style="font-size:20px; margin-left:10px;">
 					{{comment.body}}
 				</span>
 			</div>
+
 
 			<form ng-submit="addComment()"
  		    style="margin-top:30px;">
