@@ -8,7 +8,9 @@ var mongoose = require('mongoose');
 require('./models/Posts');
 require('./models/Comments');
 
-mongoose.connect('mongodb://localhost/news');
+//mongoose.connect('mongodb://localhost/news');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://heroku_kj9m05qw:9vpcvdjsu0oo6d86rku10eo33c@ds021671.mlab.com:21671/heroku_kj9m05qw');
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
