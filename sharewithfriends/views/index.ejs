@@ -27,6 +27,7 @@
 							{{post.title}}
 						</span>
 					</span>
+					<button ng-click="deletePost(post)" class="btn btn-primary">Delete</button>
 					<span>
 						<a href="#/posts/{{post._id}}">Comments</a>
 					</span>
@@ -84,9 +85,10 @@
       				ng-model="body"></input>
     			</div>
     			<button type="submit" class="btn btn-primary">Post</button>
-  
   			</form>
 		</script>
+
+
 
 	<div class="row">
     	<div class="col-md-6 col-md-offset-3">

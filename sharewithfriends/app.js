@@ -8,7 +8,10 @@ var mongoose = require('mongoose');
 require('./models/Posts');
 require('./models/Comments');
 
+//for development
 //mongoose.connect('mongodb://localhost/news');
+
+//For production
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://heroku_kj9m05qw:9vpcvdjsu0oo6d86rku10eo33c@ds021671.mlab.com:21671/heroku_kj9m05qw');
 
 

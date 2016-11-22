@@ -17,18 +17,25 @@ app.factory('posts', ['$http', function($http) {
 		});
 	};
 
+	o.deletePost = function(post) {
+		return $http.delete('/posts/' + post._id).success(function(status){
+			var index = o.posts.indexOf(post);
+			o.posts.splice(index,1);
+		});
+	};
+
 	o.upvote = function(post) {
   		return $http.put('/posts/' + post._id + '/upvote')
   		  .success(function(data){
       		post.upvotes += 1;
-    });
-};
+    	});
+	};
 
 	o.get = function(id) {
 		return $http.get('/posts/' + id).then(function(res){
     		return res.data;
-  	});
-};
+  		});
+	};
 
 	o.addComment = function(id, comment) {
  		return $http.post('/posts/' + id + '/comments', comment);
@@ -88,6 +95,10 @@ app.controller('MainCtrl', [
 		};
 		$scope.incrementUpvotes = function(post) {
   			posts.upvote(post);
+		};
+
+		$scope.deletePost = function(post) {
+			posts.deletePost(post);
 		};
 	}]);
 

@@ -59,6 +59,17 @@ router.get('/posts/:post', function(req, res, next) {
 	});
 });
 
+router.delete('/posts/:post', function(req, res, next) {
+	Post.remove({
+		_id: req.params.post_id
+	}, function(err, post) {
+		if (err)
+			res.send(err);
+
+		res.json({ message: 'Successfully deleted' });
+	});
+});
+
 router.put('/posts/:post/upvote', function(req, res, next) {
 	req.post.upvote(function(err, post){
 		if (err) { return next(err); }
