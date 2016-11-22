@@ -34,7 +34,7 @@
 				</div>
 		
 				<form ng-submit="addPost()" style="margin-top:30px;">
-					<h3>Share Links here!</h3>
+					<h3>Share Links with Friends Below</h3>
 	
 					<div class="form-group">
 						<input type="text" 
@@ -61,13 +61,14 @@
 					<span ng-hide="post.link">
 						{{post.title}}
 					</span>
+					<span style="font-size:20px; margin-left:500px;"><a href="#/posts">Home</a></span>
 				</h3>
 			</div>
 
 			<div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
 				<span class="glyphicon glyphicon-thumbs-up"
 				ng-click="upvote(comment)"></span>
-				{{comment.upvotes}} 
+				{{comment.upvotes}}
 				<span style="font-size:20px; margin-left:10px;">
 					{{comment.body}}
 				</span>
