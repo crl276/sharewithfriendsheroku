@@ -60,15 +60,15 @@ router.get('/posts/:post', function(req, res, next) {
 });
 
 router.delete('/posts/:post', function(req, res, next) {
-	Post.remove({
-		_id: req.params.post_id
+	req.post.remove({
+		_id: req.post_id
 	}, function(err, post) {
-		if (err)
-			res.send(err);
+		if (err) return res.send(err);
 
-		res.json({ message: 'Successfully deleted' });
+		res.json();
 	});
 });
+
 
 router.put('/posts/:post/upvote', function(req, res, next) {
 	req.post.upvote(function(err, post){
