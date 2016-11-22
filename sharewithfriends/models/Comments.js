@@ -9,9 +9,7 @@ var CommentSchema = new mongoose.Schema({
   post: { type: mongoose.Schema.Types.ObjectId, ref: 'Post' }
 });
 
-mongoose.model('Comment', CommentSchema);
-
-CommentSchema.methods.upvote = function(cb){
+CommentSchema.methods.upvote = function(cb) {
 	this.upvotes += 1;
 	this.save(cb);
 };
