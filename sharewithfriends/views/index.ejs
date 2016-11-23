@@ -2,11 +2,12 @@
 <html>
 	<head>
 		<title>Share with Friends</title>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 		<script src="/javascripts/angularApp.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<style> .glyphicon-thumbs-up { cursor:pointer } </style>
 	</head>
 	<body ng-app="shareWithFriends">
@@ -87,6 +88,78 @@
     			</div>
     			<button type="submit" class="btn btn-primary">Post</button>
   			</form>
+
+  			
+  			<div id="myCarousel" class="carousel slide" data-ride="carousel" target="_self">
+
+  				<ol class="carousel-indicators">
+  					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  					<li data-target="#myCarousel" data-slide-to="1"></li>
+  					<li data-target="#myCarousel" data-slide-to="2"></li>
+  					<li data-target="#myCarousel" data-slide-to="3"></li>
+  				</ol>
+
+  				<div class="carousel-inner" role="listbox">
+  					<div class="item active">
+  						<img src="https://static.pexels.com/photos/96918/pexels-photo-96918.jpeg" alt="First slide">
+  					</div>
+
+  					<div class="item">
+  						<img src="http://plusquotes.com/images/quotes-img/flower-25.jpg" alt="Second Slide">
+  					</div>
+
+  					<div class="item">
+  						<img src="http://plusquotes.com/images/quotes-img/flower-25.jpg" alt="Third slide">
+  					</div>
+
+  					<div class="item">
+  						<img src="http://plusquotes.com/images/quotes-img/flower-25.jpg" alt="Fourth slide">
+  					</div>
+  				</div>
+
+  				<span class="left carousel-control"role="button" data-slide="prev">
+  					<span class="glyphicon gylphicon-chevron-left" aria-hidden="true"></span>
+  					<span class="sr-only">Previous</span>
+  				</span>
+  				<span class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+  					<span class="gylphicon gylphicon-chevron-right" aria-hidden="true"></span>
+  					<span class="sr-only">Next</span>
+  				</span>
+  			</div>
+
+  		<div ng-controller="ButtonsCtrl">
+    <h4>Single toggle</h4>
+    <pre>{{singleModel}}</pre>
+    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+        Single Toggle
+    </button>
+    <h4>Checkbox</h4>
+    <pre>Model: {{checkModel}}</pre>
+    <pre>Results: {{checkResults}}</pre>
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox>Left</label>
+        <label class="btn btn-primary" ng-model="checkModel.middle" uib-btn-checkbox>Middle</label>
+        <label class="btn btn-primary" ng-model="checkModel.right" uib-btn-checkbox>Right</label>
+    </div>
+    <h4>Radio &amp; Uncheckable Radio</h4>
+    <pre>{{radioModel || 'null'}}</pre>
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'">Left</label>
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Middle'">Middle</label>
+        <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'">Right</label>
+    </div>
+    <div class="btn-group">
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
+    </div>
+    <div>
+        <button class="btn btn-default" ng-click="uncheckable = !uncheckable">
+            Toggle uncheckable
+        </button>
+    </div>
+</div>
+
 		</script>
 
 
