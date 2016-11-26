@@ -53,6 +53,26 @@
 				</form>
 		</script>
 
+		<script type="text/ng-template" id="/about.html">
+			<div class="page-header">
+				<div class="row">
+					<div class="col-md-4">
+						<h3>About</h3>
+					</div>
+					<div class="col-md-8">
+					</div>
+					<div class="col-md-4">
+						<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+							<li role="menuitem"><a href="#/posts">Home</a></li>
+							<li role="menuitem"><a href="#/contact">Contact</a></li>
+							<li class="divider"></li>
+							<li role="menuitem"><a href="#/posts">Also Home</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</script>
+
 		<script type="text/ng-template" id="/posts.html">
 			<div class="page-header">
 				<h3>
@@ -69,7 +89,7 @@
       					</button>
       					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
         					<li role="menuitem"><a href="#/posts">Action</a></li>
-        					<li role="menuitem"><a href="#/posts/58362bfa25674eb082e7904d">Another action</a></li>
+        					<li role="menuitem"><a href="#/about">Another action</a></li>
         					<li role="menuitem"><a href="#">Something else here</a></li>
         					<li class="divider"></li>
         					<li role="menuitem"><a href="#">Separated link</a></li>
@@ -101,10 +121,9 @@
     			</div>
     			<button type="submit" class="btn btn-primary">Post</button>
   			</form>
-
-
-
 		</script>
+
+
 
 
 

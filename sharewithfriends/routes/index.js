@@ -17,6 +17,8 @@ router.get('/posts', function(req, res, next) {
 	});
 });
 
+
+
 router.post('/posts', function(req, res, next) {
 	var post = new Post(req.body);
 
