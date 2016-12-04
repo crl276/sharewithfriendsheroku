@@ -17,7 +17,9 @@ router.get('/posts', function(req, res, next) {
 	});
 });
 
-
+//router.get('/about', function(req, res, next) {
+//	res.render('/about.html');
+//});
 
 router.post('/posts', function(req, res, next) {
 	var post = new Post(req.body);

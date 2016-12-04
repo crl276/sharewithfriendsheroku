@@ -6,8 +6,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
 		<script src="/javascripts/angularApp.js"></script>
+		<script src="/javascripts/jquery.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.min.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/stylesheets/style.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<style> .glyphicon-thumbs-up { cursor:pointer } </style>
 	</head>
 	<body ng-app="shareWithFriends">
@@ -54,23 +57,43 @@
 		</script>
 
 		<script type="text/ng-template" id="/about.html">
-			<div class="page-header">
-				<div class="row">
-					<div class="col-md-4">
-						<h3>About</h3>
+			<section class="container-fluid">
+				<nav id="topNavBar" class="navbar navbar-fixed-top container-fluid">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a href="http://www.skillshare.com/" title="Skillshare" class="logo">
+								<img class="logo-image" src="https://static.skillshare.com/assets/images/logo-header.svg?_=0">
+							</a>
+						</div>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="nav-item">
+									<a id="navBlog" class="nav-link navLink" href="www.kickstarter.com">Blog</a>
+								</li>
+								<li class="nav-item">
+									<a id="navFaq" class="nav-link navLink" href="www.kickstarter.com">FAQ</a>
+								</li>
+								<li class="nav-item">
+									<a id="navLogin" class="nav-link navLink" href="www.kickstarter.com">Login</a>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="col-md-8">
-					</div>
-					<div class="col-md-4">
-						<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
-							<li role="menuitem"><a href="#/posts">Home</a></li>
-							<li role="menuitem"><a href="#/contact">Contact</a></li>
-							<li class="divider"></li>
-							<li role="menuitem"><a href="#/posts">Also Home</a></li>
-						</ul>
+				</nav>
+			</section>
+			<section class="container-fluid">
+				<div class="marketing-banner-hero">
+					<div class="centered-content">
+						<h3 class="center-text">About Share with Friends</h3>
 					</div>
 				</div>
-			</div>
+			</section>
+			<section class="container-fluid">
+				<div class="container-fluid">
+					<div class="page-header">
+						<h1>Make Sharing, Easy</h1>
+					</div>
+				</div>
+			</section>
 		</script>
 
 		<script type="text/ng-template" id="/posts.html">
@@ -88,14 +111,14 @@
         					Button dropdown <span class="caret"></span>
       					</button>
       					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-        					<li role="menuitem"><a href="#/posts">Action</a></li>
-        					<li role="menuitem"><a href="#/about">Another action</a></li>
+        					<li role="menuitem"><a href="#/posts">Home</a></li>
+        					<li role="menuitem"><a href="#/about">about Page</a></li>
         					<li role="menuitem"><a href="#">Something else here</a></li>
         					<li class="divider"></li>
         					<li role="menuitem"><a href="#">Separated link</a></li>
       					</ul>
-    				</div>	
-					<span style="font-size:20px; margin-left:500px;"><a href="#/posts">Home</a></span>
+    				</div>
+					<span style="font-size:20px; margin-left:500px;"><a href="#/about">Home</a></span>
 				</h3>
 			</div>
 
@@ -128,9 +151,7 @@
 
 
 	<div class="row">
-    	<div class="col-md-6 col-md-offset-3">
      		<ui-view></ui-view>
-    	</div>
   	</div>
 	
 

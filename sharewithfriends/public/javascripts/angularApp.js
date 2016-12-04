@@ -65,6 +65,11 @@ app.config([
 					}]
 				}
 			})
+			.state('about', {
+				url: '/about',
+				templateUrl: '/about.html',
+				controller: 'AboutCtrl'
+			})
 			.state('posts', {
   				url: '/posts/{id}',
   				templateUrl: '/posts.html',
@@ -122,6 +127,11 @@ app.controller('PostsCtrl', [
   			posts.upvoteComment(post, comment);
   		};
 	}]);
+
+app.controller('AboutCtrl', ['$scope', function($scope){
+	var ctr = this;
+	ctr.text = "About Test";
+}]);
 
 app.controller('DropDownCtrl', function($scope, $log) {
 	$scope.items = [
