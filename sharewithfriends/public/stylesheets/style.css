@@ -11,13 +11,60 @@ a {
 	font-size: 40px;
 }
 
+.body {
+	vertical-align: top;
+	color: #333;
+}
+
+.hero {
+	z-index: 10;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	height: 440px;
+	vertical-align: top;
+	background-image: url("http://static.asiawebdirect.com/m/phuket/portals/phuket-com/homepage/phuket-magazine/freedom-beach/pagePropertiesImage/freedom-beach.jpg");
+}
+
+.hero .carousel-caption {
+	display: block;
+	box-sizing: border-box;
+	right: 20%;
+	left: 20%;
+	padding-bottom: 30px;
+	color: #fff;
+}
+
+.tagline {
+	padding: 0 20%;
+	font-size: 36px;
+	margin-top: 160px;
+	color: #fff;
+	text-align: center;
+}
+
+.share-button {
+	display: block;
+	width: 15%;
+	margin: 0px auto;
+	margin-top: 30px;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 12px 40px;
+	background-color: #add8e6;
+}
+
 #topNavBar {
 	height: 69px;
 	padding: 0;
 }
 
 .navbar-fixed-top {
+	position: fixed;
+	right: 0
+	left: 0;
 	top: 0;
+	z-index: 1030;
 	border-width: 0 0 1px;
 }
 
@@ -36,6 +83,7 @@ a {
 .container-fluid {
 	padding-right: 15px;
 	padding-left: 15px;
+	padding-bottom: 15px;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
@@ -101,4 +149,84 @@ a {
 	font-family: Helvetica;
 }
 
+.icon-row img {
+	padding-top: 40px;
+	height: auto;
+	width: auto;
+	max-width: 100px;
+	max-height: 100px;
+}
+
+#featuresDescriptions {
+	padding-bottom: 60px;
+}
+
+.image-container {
+	position: relative;
+	min-height: 600px;
+	min-width: 300px;
+	box-sizing: border-box;
+	padding: 0;
+	float: left;
+}
+
+.pull-left {
+	float: left;
+}
+
+.background-image-holder {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	box-sizing: border-box;
+	display: block;
+	background-image: url(http://66.media.tumblr.com/8facc19253458ca5c10206567592158e/tumblr_mf3zis1ceH1ri2oy7o1_1280.jpg);
+}
+
+.text-container {
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-top: 40px;
+	background-color: #f4f4f4;
+	height: 600px;
+	display: block;
+}
+
+.text-container h3 {
+	color: #777;
+}
+
+.lead {
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 400;
+}
+
+#listOfProjects {
+	width: 100%;
+}
+
+
+#communitiesWorkedWith {
+	text-align: center;
+	padding-top: 60px;
+}
+
+.client-row {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.client-row img {
+	height: auto;
+	width: auto;
+	max-width: 200px;
+	max-height: 200px;
+	padding-bottom: 80px;
+}
 
