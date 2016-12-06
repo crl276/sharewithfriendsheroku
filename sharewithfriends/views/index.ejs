@@ -15,7 +15,7 @@
 	</head>
 	<body ng-app="shareWithFriends">
 		<script type="text/ng-template" id="/home.html">
-			
+			<section class="container-fluid">
 				<div class="page-header">
 					<h1>Share with Friends</h1>
 				</div>
@@ -23,7 +23,7 @@
 				<div ng-repeat="post in posts | orderBy: '-upvotes'">
 					<span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
 					{{post.upvotes}}
-					<span style="font-size:20px; margin-left: 10px;">
+					<span style="font-size:20px;">
 						<a ng-show="post.link" href="{{post.link}}">
 							{{post.title}}
 						</a>
@@ -37,7 +37,7 @@
 					<button ng-click="deletePost(post)" class="btn btn-primary">Delete</button>
 				</div>
 		
-				<form ng-submit="addPost()" style="margin-top:30px;">
+				<form ng-submit="addPost()">
 					<h3>Share Links with Friends Below</h3>
 	
 					<div class="form-group">
@@ -54,6 +54,7 @@
 					</div>
 					<button type="submit" class="btn btn-primary">Post</button>
 				</form>
+			</section>
 		</script>
 
 		<script type="text/ng-template" id="/about.html">
@@ -163,9 +164,116 @@
 					</div>
 				</div>
 			</section>
+			<section id="primaryTestimonials" class="container-fluid">
+				<div class="container">
+					<div class="row">
+						<ul class="slides">
+							<li class="testimonial">
+								<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+								<span class="author">Bob Dole</span>
+							</li>
+							<li class="testimonial">
+								<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+								<span class="author">Bob Dole</span>
+							</li>
+							<li class="testimonial">
+								<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+								<span class="author">Bob Dole</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section id="jqueryMenus" class="container fluid">
+				<div id="accordion">
+  					<h3>Section 1</h3>
+  						<div>
+    					<p>
+    						Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    						ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    						amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    						odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+    					</p>
+  					</div>
+  				<h3>Section 2</h3>
+  					<div>
+    					<p>
+    						Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    						purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    						velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    						suscipit faucibus urna.
+    					</p>
+  					</div>
+  				<h3>Section 3</h3>
+  					<div>
+    					<p>
+    						Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    						Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    						ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    						lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    					</p>
+    					<ul>
+      						<li>List item one</li>
+      						<li>List item two</li>
+      						<li>List item three</li>
+    					</ul>
+  					</div>
+				<h3>Section 4</h3>
+  					<div>
+    					<p>
+    						Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    						et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    						faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    						mauris vel est.
+    					</p>
+    					<p>
+    						Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    						Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    						inceptos himenaeos.
+    					</p>
+  					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="footer-inner">
+					<div class="footer-main-container">
+						<div class="grid">
+							<ul class="row top-section-clear">
+								<li id="footerColumns" class="col-md-3">
+									<h4>About</h4>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+								</li>
+								<li id="footerColumns" class="col-md-3">
+									<h4>Company</h4>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+								</li>
+								<li id="footerColumns" class="col-md-3">
+									<h4>Resources</h4>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+										<p>Lorem Ipsum</p>
+								</li>
+								<li id="footerColumns" class="col-md-3">
+									<h4>Mobile</h4>
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/800px-Download_on_the_App_Store_Badge.svg.png">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/2000px-Get_it_on_Google_play.svg.png">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</script>
 
 		<script type="text/ng-template" id="/posts.html">
+			<section class="container-fluid">
 			<div class="page-header">
 				<h3>
 					<a ng-show="post.link" href="{{post.link}}">
@@ -187,7 +295,6 @@
         					<li role="menuitem"><a href="#">Separated link</a></li>
       					</ul>
     				</div>
-					<span style="font-size:20px; margin-left:500px;"><a href="#/about">Home</a></span>
 				</h3>
 			</div>
 
@@ -213,6 +320,7 @@
     			</div>
     			<button type="submit" class="btn btn-primary">Post</button>
   			</form>
+  		</section>
 		</script>
 
 

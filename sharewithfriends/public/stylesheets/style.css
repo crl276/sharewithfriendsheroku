@@ -230,3 +230,66 @@ a {
 	padding-bottom: 80px;
 }
 
+#primaryTestimonials {
+	display: block;
+	background-color: #f4f4f4;
+}
+
+.slides {
+	list-style: none;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.author {
+	margin-bottom: 20px;
+	color: #287fca;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+footer {
+	padding: 0 0 20px;
+	font-size: 17px;
+	background-color: #003d4d;
+	flex: 0 0 auto;
+	height: 300px;
+}
+
+.footer-inner {
+	max-width: 1080px;
+	padding: 10px 20px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.footer-main-container {
+	margin: 20px 0;
+	flex-wrap: wrap-reverse;
+}
+
+.footer-main-container ul {
+	list-style: none;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#footerColumns h4 {
+	color: #fff;
+}
+
+#footerColumns p {
+	color: rgba(255,255,255,.5);
+}
+
+#footerColumns img {
+	max-width: 150px;
+	max-height: 100px;
+	padding-bottom: 15px;
+}
+
+.form-group {
+	display: inline-block;
+	width: 300px;
+	text-align: center;
+}
