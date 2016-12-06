@@ -13,6 +13,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<style> .glyphicon-thumbs-up { cursor:pointer } </style>
 	</head>
+	
 	<body ng-app="shareWithFriends">
 		<script type="text/ng-template" id="/home.html">
 			<section class="container-fluid">
@@ -23,6 +24,7 @@
 				<div ng-repeat="post in posts | orderBy: '-upvotes'">
 					<span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
 					{{post.upvotes}}
+					<span class="glyphicon glyphicon-thumbs-down" ng-click="downvote(post)"></span>
 					<span style="font-size:20px;">
 						<a ng-show="post.link" href="{{post.link}}">
 							{{post.title}}
@@ -85,7 +87,7 @@
 				<div class="hero">
 					<div class="carousel-content">
 						<h1 class="tagline">Share with Friends</h1>
-						<button class="share-button">Join Here</button>
+						<button class="share-button"><a href="#/posts">Join Here</a></button>
 					</div>
 				</div>
 			
@@ -218,6 +220,7 @@
       						<li>List item three</li>
     					</ul>
   					</div>
+
 				<h3>Section 4</h3>
   					<div>
     					<p>
@@ -233,6 +236,7 @@
     					</p>
   					</div>
 				</div>
+
 			</section>
 			<footer>
 				<div class="footer-inner">
@@ -320,6 +324,39 @@
     			</div>
     			<button type="submit" class="btn btn-primary">Post</button>
   			</form>
+
+  			<uib-accordion close-others="oneAtATime">
+    <div uib-accordion-group class="panel-default" heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+      This content is straight in the template.
+    </div>
+    <div uib-accordion-group class="panel-default" heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
+    </div>
+    <div uib-accordion-group class="panel-default" heading="Dynamic Body Content">
+      <p>The body of the uib-accordion group grows to fit the contents</p>
+      <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+      <div ng-repeat="item in items">{{item}}</div>
+    </div>
+    <div uib-accordion-group class="panel-default" heading="Custom template" template-url="group-template.html">
+      Hello
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
+      <uib-accordion-heading>
+        Custom template with custom header template <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
+      </uib-accordion-heading>
+      World
+    </div>
+    <div uib-accordion-group class="panel-danger" heading="Delete account">
+      <p>Please, to delete your account, click the button below</p>
+      <button class="btn btn-danger">Delete</button>
+    </div>
+    <div uib-accordion-group class="panel-default" is-open="status.open">
+      <uib-accordion-heading>
+        I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+      </uib-accordion-heading>
+      This is just some content to illustrate fancy headings.
+    </div>
+  </uib-accordion>
   		</section>
 		</script>
 

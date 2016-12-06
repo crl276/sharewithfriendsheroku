@@ -31,6 +31,13 @@ app.factory('posts', ['$http', function($http) {
     	});
 	};
 
+	o.downvote = function(post) {
+		return $http.put('/posts/' + post._id + '/downvote')
+			.success(function(data){
+				post.upvotes -= 1;
+			});
+	};
+
 	o.get = function(id) {
 		return $http.get('/posts/' + id).then(function(res){
     		return res.data;
@@ -100,6 +107,10 @@ app.controller('MainCtrl', [
 		};
 		$scope.incrementUpvotes = function(post) {
   			posts.upvote(post);
+		};
+
+		$scope.downvote = function(post) {
+			posts.downvote(post);
 		};
 
 		$scope.deletePost = function(post) {
